@@ -32,9 +32,9 @@ public class Main {
         List<Person> people = Arrays.asList(
                 new Person("Jack", "X", 30),
                 new Person("John", "Y", 20),
-                new Person("Sun", "Z", 40),
-                new Person("Ken", "Q", 20),
-                new Person("Ryu", "T", 40)
+                new Person("Sun", "Z", 45),
+                new Person("Ken", "Q", 60),
+                new Person("Ryu", "T", 35)
         );
         filter = "Sun";
 
@@ -44,6 +44,27 @@ public class Main {
 
         // Java8+
         res = getPersonByNameWithJava8(people, filter);
+
+
+        // another sample usages
+        // we can filter by any of the fields we want on person
+        String tempFilter = "John";
+        Person person1 = people.stream()
+                .filter((p) -> tempFilter.equals(p.getName()) && 20 == p.getAge())
+                .findAny()
+                .orElse(null);
+
+        System.out.println("Filtered Person 1 :" + person1);
+
+        Person person2 = people.stream().filter(p -> {
+                    if (tempFilter.equals(p.getName()) && 20 == p.getAge()) {
+                        return true;
+                    }
+                    return false;
+                }).findAny()
+                .orElse(null);
+
+        System.out.println("Filtered Person 2 :" + person2);
 
     }
 

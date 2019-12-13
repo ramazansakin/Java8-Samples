@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43282805-d35f-43d7-b9ea-03442041222a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot-elasticsearch-example/springboot-springdata-elasticsearch-example.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sakinramazan/sample/SampleComparatorWithJava8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sakinramazan/sample/SampleComparatorWithJava8.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +80,7 @@
       <updated>1576094175678</updated>
       <workItem from="1576094178691" duration="1722000" />
       <workItem from="1576210385664" duration="42000" />
+      <workItem from="1576269677335" duration="64000" />
     </task>
     <servers />
   </component>

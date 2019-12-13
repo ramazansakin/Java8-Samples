@@ -32,12 +32,10 @@ public class SampleComparatorWithJava8 {
         Collections.sort(listDevs, Comparator.comparingInt(Person::getAge));
 
         // its getting shorter when we use java8+ :)
-
         System.out.println("Persons after sorting: ");
         for (Person Person : listDevs) {
             System.out.println(Person);
         }
-
 
         // Other comparators for the other fields of Person class
         Collections.sort(listDevs, new Comparator<Person>() {
@@ -62,7 +60,6 @@ public class SampleComparatorWithJava8 {
                 return o1.getSalary() - o2.getSalary();
             }
         });
-
     }
 
     private static List<Person> getPersons() {
@@ -80,5 +77,4 @@ public class SampleComparatorWithJava8 {
 
         return result;
     }
-
 }

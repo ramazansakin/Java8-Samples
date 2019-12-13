@@ -28,7 +28,7 @@ public class EmployeeController
     public ResponseEntity<List<EmployeeEntity>> getAllEmployees() {
         List<EmployeeEntity> list = service.getAllEmployees();
  
-        return new ResponseEntity<List<EmployeeEntity>>(list, new HttpHeaders(), HttpStatus.OK);
+        return new ResponseEntity<>(list, new HttpHeaders(), HttpStatus.OK);
     }
  
     @GetMapping("/{id}")
@@ -36,14 +36,14 @@ public class EmployeeController
                                                     throws RecordNotFoundException {
         EmployeeEntity entity = service.getEmployeeById(id);
  
-        return new ResponseEntity<EmployeeEntity>(entity, new HttpHeaders(), HttpStatus.OK);
+        return new ResponseEntity<>(entity, new HttpHeaders(), HttpStatus.OK);
     }
  
     @PostMapping
     public ResponseEntity<EmployeeEntity> createOrUpdateEmployee(EmployeeEntity employee)
                                                     throws RecordNotFoundException {
         EmployeeEntity updated = service.createOrUpdateEmployee(employee);
-        return new ResponseEntity<EmployeeEntity>(updated, new HttpHeaders(), HttpStatus.OK);
+        return new ResponseEntity<>(updated, new HttpHeaders(), HttpStatus.OK);
     }
  
     @DeleteMapping("/{id}")

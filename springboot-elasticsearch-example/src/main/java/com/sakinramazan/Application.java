@@ -31,12 +31,13 @@ public class Application implements CommandLineRunner {
 
         printElasticSearchInfo();
 
-        bookService.save(new Book("1001", "Elasticsearch Basics", "Rambabu Posa", "23-FEB-2017"));
-        bookService.save(new Book("1002", "Apache Lucene Basics", "Rambabu Posa", "13-MAR-2017"));
-        bookService.save(new Book("1003", "Apache Solr Basics", "Rambabu Posa", "21-MAR-2017"));
+        // creating test entities
+        bookService.save(new Book("1", "Sample title 1", "Author 1", "23-FEB-2017"));
+        bookService.save(new Book("2", "Sample title 2", "Author 2", "13-MAR-2017"));
+        bookService.save(new Book("3", "Sample title 3", "Author 3", "21-MAR-2017"));
 
         //fuzzey search
-        Page<Book> books = bookService.findByAuthor("Rambabu", new PageRequest(0, 10));
+        Page<Book> books = bookService.findByAuthor("AuthorX", new PageRequest(0, 10));
 
         //List<Book> books = bookService.findByTitle("Elasticsearch Basics");
 
@@ -48,14 +49,14 @@ public class Application implements CommandLineRunner {
     //useful for debug
     private void printElasticSearchInfo() {
 
-        System.out.println("--ElasticSearch-->");
+        System.out.println("############################# Sample usage ElasticSearch #############################");
         Client client = es.getClient();
         Map<String, String> asMap = client.settings().getAsMap();
 
         asMap.forEach((k, v) -> {
             System.out.println(k + " = " + v);
         });
-        System.out.println("<--ElasticSearch--");
+        System.out.println("################################ End of ElasticSearch #################################");
     }
 
 }

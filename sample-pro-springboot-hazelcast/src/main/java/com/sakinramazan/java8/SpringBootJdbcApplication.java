@@ -23,13 +23,16 @@ public class SpringBootJdbcApplication {
         EmployeeService employeeService = context.getBean(EmployeeService.class);
 
         // creating sample test datas
-        Employee e1 = new Employee("Xemployee");    // id : 1
-        Employee e2 = new Employee("Yemployee");    // id : 2
-        Employee e3 = new Employee("Zemployee");    // id : 3
+        Employee e1 = new Employee("X-employee");    // id : 1
+        Employee e2 = new Employee("Y-employee");    // id : 2
+        Employee e3 = new Employee("Z-employee");    // id : 3
 
+        // inserting sample datas to hazelcast storage
         employeeService.insertEmployee(e1);
+        employeeService.insertEmployee(e2);
+        employeeService.insertEmployee(e3);
 
-        // Test getEmployeeById
+        // Test getEmployeeById method
         Employee temp = employeeService.getEmployeeById(2);
         System.out.println("Testing getEmployeeById : " + temp);
 

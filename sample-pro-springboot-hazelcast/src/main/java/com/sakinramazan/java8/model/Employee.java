@@ -1,7 +1,14 @@
 package com.sakinramazan.java8.model;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.ToString;
+
 import java.io.Serializable;
 
+@Getter
+@Builder
+@ToString
 public class Employee implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -18,21 +25,8 @@ public class Employee implements Serializable {
         this.empName = empName;
     }
 
-    public Integer getEmpId() {
-        return empId;
-    }
-
-    public String getEmpName() {
-        return empName;
-    }
-
     public void setEmpName(String empName) {
         this.empName = empName;
-    }
-
-    @Override
-    public String toString() {
-        return "Employee [empId=" + empId + ", empName=" + empName + "]";
     }
 
 }

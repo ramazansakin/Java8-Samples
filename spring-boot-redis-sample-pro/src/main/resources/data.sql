@@ -1,0 +1,10 @@
+
+insert into movie (name, director) values ('Sample Movie 1', 'Director 1')
+insert into movie (name, director) values ('Sample Movie 2', 'Director 2')
+insert into movie (name, director) values ('Sample Movie 3', 'Director 3')
+insert into movie (name, director) values ('Sample Movie 4', 'Director 4')
+insert into movie (name, director) values ('Sample Movie 5', 'Director 5')
+insert into movie (name, director) values ('Sample Movie 6', 'Director 6')
+insert into movie (name, director) values ('Sample Movie 7', 'Director 7')
+insert into movie (name, director) values ('Sample Movie 8', 'Director 8')
+insert into movie (name, director) values ('Sample Movie 9', 'Director 9')
